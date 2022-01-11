@@ -26,7 +26,7 @@ const div = document.createElement("div");
 div.style.display = "flex";
 div.style.flexDirection = "row";
 
-div.style.height = "40rem";
+div.style.height = "20rem";
 div.style.border = " 1px solid";
 div.style.backgroundColor = "#white";
 //div.style.gap = "28%";
@@ -55,34 +55,14 @@ for (let j = 0; j < 3; j++) {
     const h3 = document.createElement("h3");
     h3.style.display = "flex";
     h3.style.height = "100%";
-    h3.style.fontSize = "35px";
+    h3.style.fontSize = "1rem";
 
     h3.innerText = `${i} `;
 
     //innerDiv2.style.border = " 1px solid yellow";
-    if (j == 1) {
-      h3.innerText = `${9 - i} `;
-      h3.style.justifyContent = "center";
-      
-
-      if (i == 1) {
-        backcolor = h3.style.backgroundColor = "#a8a8f0";
-        h3.style.color = "white";
-      } else if (i == 0 || i == 2 || i == 4 || i == 6 || i == 8) {
-        backcolor = h3.style.backgroundColor = "white";
-        textcolor = h3.style.color = "black";
-      }
-    }
-    else if(j == 2){
-      const siffror = ["ett", "två", "tre", "fyra","fem", "sex", "sju", "åtta", "nio", "tio"];
-      h3.innerText = `${siffror[i]} `;
-      h3.style.fontSize = "25px";
-      h3.style.justifyContent = "end";
-      
-      
-
-    }
-
+    
+    
+    
     if (i == 4) {
       backcolor = h3.style.backgroundColor = "#a8a8f0";
       h3.style.color = "white";
@@ -102,30 +82,60 @@ for (let j = 0; j < 3; j++) {
         h3.style.marginBottom = "15%";
       }
     }
+    if (j == 1) {
+      h3.innerText = `${9 - i} `;
+      h3.style.justifyContent = "center";
+
+       if (i == 1) {
+         // backcolor = h3.style.backgroundColor = "yellow";
+         h3.style.backgroundColor = "#a8a8f0";
+         h3.style.color = "white";
+       } else if (i == 0 || i == 2 || i == 4 || i == 6 || i == 8) {
+         backcolor = h3.style.backgroundColor = "white";
+         textcolor = h3.style.color = "black";
+       }
+       else{
+        backcolor = h3.style.backgroundColor = "black";
+        textcolor = h3.style.color = "white";
+       }
+      
+    } else if (j == 2) {
+      const siffror = [
+        "ett",
+        "två",
+        "tre",
+        "fyra",
+        "fem",
+        "sex",
+        "sju",
+        "åtta",
+        "nio",
+        "tio",
+      ];
+      h3.innerText = `${siffror[i]} `;
+      h3.style.fontSize = "1rem";
+      h3.style.justifyContent = "end";
+
+      
+    }
     h3.style.padding = "0%";
     innerDiv.appendChild(h3);
   }
 
-
-  
-
   //innerDiv2.style.backgroundColor = "white";
-
-  
 
   //innerDiv.appendChild(innerDiv2);
 }
 
 var x = document.querySelectorAll("div > h3");
 var i;
-for (i = 24; i <  25; i++) {
-  if(i == 25 )
-  x[i].style. backgroundColor = "#a8a8f0";
-  else{
-    x[i].style. backgroundColor = "black";
+for (i = 24; i < 26; i++) {
+  if (i == 25){
+    x[i].style.backgroundColor = "#a8a8f0";
+    console.log("test")
+
+  } 
+  else {
+    x[i].style.backgroundColor = "black";
   }
 }
-
-
-
-
